@@ -17,18 +17,18 @@ Your task is to create a simple WordPress plugin that adds a custom shortcode to
 
 ## Task Requirements
 
-1. Create a new WordPress plugin with a unique name and a basic plugin header.
-2. Implement a custom shortcode that meets the following specifications:
+1. Implement a custom shortcode that meets the following specifications:
    - The shortcode should be named `[cta_box]`.
-   - The shortcode should accept the following attributes: `title`, `message`, `button_label`, and `button_url`.
-   - The output of the shortcode should be a styled CTA box containing a title, a short message, a button with the specified label and URL (open in new tab), and a click counter.
-3. Add JavaScript functionality to the shortcode output:
+   - The shortcode should accept the following attributes: `title`, `button_label`, and `button_url`.
+   - The output of the shortcode should be a styled CTA box containing a title, the shortcode contents, a button with the specified label and URL (open in new tab), and a click counter.
+   - The shortcode contents can contain the following HTML elements: `strong`, `em`, `mark`
+2. Add JavaScript functionality to the shortcode output:
    - The click counter should increment each time the button is clicked and store the count per user using the browser's localStorage.
-   - Use vanilla JavaScript or jQuery to implement the click counter functionality.
+   - Decide how you want to implement the front end click-counter logic. The choice is up to you: You can use vanilla JavaScript, jQuery, or React.
    - Properly enqueue the JavaScript file in the plugin.
-4. Ensure the plugin follows WordPress code style guidelines and best practices for plugin and shortcode development.
-5. The code should run on the latest WordPress version using its [recommended requirements](https://wordpress.org/about/requirements/).
-6. Update this README.md file with clear documentation on how to install, set up, and use the plugin, including shortcode usage examples.
+3. Ensure the plugin follows WordPress code style guidelines and best practices for plugin and shortcode development.
+4. The code should run on the latest WordPress version using its [recommended requirements](https://wordpress.org/about/requirements/).
+5. Update this README.md file with clear documentation on how to install, set up, and use the plugin, including shortcode usage examples.
 
 ## Deliverables
 
@@ -37,8 +37,12 @@ Your task is to create a simple WordPress plugin that adds a custom shortcode to
 ## Sample Shortcode
 
 We will use the following shortcode to test your plugin:
+
 ```
-[cta_box title="Start Using Divi" message="Discover the power and flexibility of Divi, the ultimate WordPress theme and visual page builder. Create stunning websites with ease and elevate your web design game. Click the button below to get started with Divi today!" button_label="Try it for free" button_url="https://elegantthemes.com"]
+[cta_box title="Start Using Divi" button_label="Try it for free" button_url="https://elegantthemes.com"]
+Discover the power and flexibility of Divi, the <strong>ultimate WordPress theme</strong> and visual page builder.
+Create stunning websites with ease and elevate your web design game. Click the button below to get started with Divi today!
+[/cta_box]
 ```
 
 ## Evaluation Criteria
